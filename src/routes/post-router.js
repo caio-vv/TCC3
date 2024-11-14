@@ -11,7 +11,7 @@ const router = Router(); // iniciando o router
 
 // Rotas públicas
 
-//router.use(authenticator); // usando o authenticator
+router.use(authenticator); // usando o authenticator
 
 // Rotas privadas
 router.get("/", index); 
