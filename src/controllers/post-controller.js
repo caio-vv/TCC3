@@ -3,13 +3,12 @@ import Post from "../models/post-model.js"; // importando o Post
 export const store = async (req, res) => { // função para criar um post aapi
   try {
     const { title, text, course } = req.body;
-    const user = req.user._id;
+    //const user = req.user._id;
 
     const content = await Post.create({
       title,
       text,
       course,
-      user,
     });
 
     res.status(201).json(content);
